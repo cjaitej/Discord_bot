@@ -332,4 +332,4 @@ async def clear(ctx, ammount=5): #to delete messages
 
 keep_alive()
 
-client.run('Nzk0ODAyMTQ2MTk2OTc5NzQy.X_AHLg.4DuwFs4BFWiP741YQuVwtN6CBDY')
+client.run('Token_number')
