@@ -248,24 +248,6 @@ async def hug(ctx , name):
 @client.command() ## its command not commands!!! bitch
 async def ping(ctx):
     await ctx.send(f'Pong! {round(client.latency*1000)}ms')
-
-
-
-@client.command()
-async def exam(ctx , name1, name2, name3, name4, name5):
-  rec = [name1, name2, name3, name4, name5]
-  sen = [name1, name2, name3, name4, name5]  
-  j = 0
-  for i in sen:
-    p = random.choice(rec)
-    while p == i:
-      p = random.choice(rec)
-    j = j + 1
-    await ctx.send(f'{i} is your question maker! {p}')
-    rec.remove(p)
-    if j == 4:
-      break
-  print("- Function exam() is Finshed!")
    
   
 @client.command()
@@ -341,17 +323,6 @@ async def _ask(ctx, *, question):
         "Very doubtful."
     ]
     await ctx.send(f' Question : {question}  \nAnswer : {random.choice(response)}')
-
-@client.command()
-@commands.has_permissions()
-async def alarm(ctx, n): #to delete messages
-    now = datetime.datetime()
-    await ctx.send(f'You have set alarm for {n} mins')
-    while now.mins() > int(n):
-      print(now().mins)
-    await ctx.send(f'{n} mins are completed!')
-    
-    
 
 
 @client.command()
