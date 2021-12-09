@@ -9,17 +9,6 @@ prefix = '#'
 
 client = commands.Bot(command_prefix= prefix)
 
-
-
-@client.command()
-@commands.has_permissions(ban_members = True)
-async def prefix(ctx, prefix = '#'):
-  prefix = prefix
-  p = await ctx.send(f' >>> Prefix is changed to -- {prefix}')
-  await discord.Message.edit(p,content='I am Ironman')
-
-
-
 greetings = [
   '`yo! What’s happening?`:sunglasses: :sunglasses: ',
   ':love_you_gesture_tone1: `Hey, What’s up?`:love_you_gesture_tone1: ',
